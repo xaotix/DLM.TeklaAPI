@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tekla.Logging</name>
+    </assembly>
+    <members>
+        <member name="T:Tekla.Logging.ILog">
+            <summary>
+            Simple logging abstraction in order to provide a layer of indirection between logging calls made by MCP
+            and the specific logging library used in your application (log4net, EntLib logging, NLog).
+            see: http://springframework.net/docs/1.1-RC1/reference/html/logging.html.
+            </summary>
+        </member>
+        <member name="P:Tekla.Logging.ILog.IsDebugEnabled">
+            <summary>Gets a value indicating whether this logger is enabled for the Debug level.</summary>
+            <value>The is debug enabled.</value>
+        </member>
+        <member name="P:Tekla.Logging.ILog.IsErrorEnabled">
+            <summary>Gets a value indicating whether this logger is enabled for the Error level.</summary>
+            <value>The is error enabled.</value>
+        </member>
+        <member name="P:Tekla.Logging.ILog.IsFatalEnabled">
+            <summary>Gets a value indicating whether this logger is enabled for the Fatal level.</summary>
+            <value>The is fatal enabled.</value>
+        </member>
+        <member name="P:Tekla.Logging.ILog.IsInfoEnabled">
+            <summary>Gets a value indicating whether this logger is enabled for the Info level.</summary>
+            <value>The is info enabled.</value>
+        </member>
+        <member name="P:Tekla.Logging.ILog.IsTraceEnabled">
+            <summary>Gets a value indicating whether this logger is enabled for the Trace level.</summary>
+            <value>The is trace enabled.</value>
+        </member>
+        <member name="P:Tekla.Logging.ILog.IsWarnEnabled">
+            <summary>Gets a value indicating whether  this logger is enabled for the Warn level.</summary>
+            <value>The is warn enabled.</value>
+        </member>
+        <member name="P:Tekla.Logging.ILog.LogFile">
+            <summary>Gets the path to log file.</summary>
+            <value>The log file.</value>
+        </member>
+        <member name="M:Tekla.Logging.ILog.Debug(System.Object)">
+            <summary>Logs a message object with the Debug level.</summary>
+            <param name="message">The message object to log.</param>
+        </member>
+        <member name="M:Tekla.Logging.ILog.Debug(System.Object,System.Exception)">
+            <summary>Log a message object with the Debug level including the stack trace of the Exception passed as a parameter.</summary>
+            <param name="message">The message object to log.</param>
+            <param name="exception">The exception to log, including its stack trace.</param>
+        </member>
+        <member name="M:Tekla.Logging.ILog.Error(System.Object)">
+            <summary>Logs a message object with the Error level.</summary>
+            <param name="message">The message object to log.</param>
+        </member>
+        <member name="M:Tekla.Logging.ILog.Error(System.Object,System.Exception)">
+            <summary>Log a message object with the Error level including the stack trace of the Exception passed as a parameter.</summary>
+            <param name="message">The message object to log.</param>
+            <param name="exception">The exception to log, including its stack trace.</param>
+        </member>
+        <member name="M:Tekla.Logging.ILog.Fatal(System.Object)">
+            <summary>Logs a message object with the Fatal level.</summary>
+            <param name="message">The message object to log.</param>
+        </member>
+        <member name="M:Tekla.Logging.ILog.Fatal(System.Object,System.Exception)">
+            <summary>Log a message object with the Fatal level including the stack trace of the Exception passed as a parameter.</summary>
+            <param name="message">The message object to log.</param>
+            <param name="exception">The exception to log, including its stack trace.</param>
+        </member>
+        <member name="M:Tekla.Logging.ILog.Info(System.Object)">
+            <summary>Logs a message object with the Info level.</summary>
+            <param name="message">The message object to log.</param>
+        </member>
+        <member name="M:Tekla.Logging.ILog.Info(System.Object,System.Exception)">
+            <summary>Log a message object with the Info level including the stack trace of the Exception passed as a parameter.</summary>
+            <param name="message">The message object to log.</param>
+            <param name="exception">The exception to log, including its stack trace.</param>
+        </member>
+        <member name="M:Tekla.Logging.ILog.Trace(System.Object)">
+            <summary>Logs a message object with the Trace level.</summary>
+            <param name="message">The message object to log.</param>
+        </member>
+        <member name="M:Tekla.Logging.ILog.Trace(System.Object,System.Exception)">
+            <summary>Log a message object with the Trace level including the stack trace of the Exception passed as a parameter.</summary>
+            <param name="message">The message object to log.</param>
+            <param name="exception">The exception to log, including its stack trace.</param>
+        </member>
+        <member name="M:Tekla.Logging.ILog.Warn(System.Object)">
+            <summary>Logs a message object with the Warn level.</summary>
+            <param name="message">The message object to log.</param>
+        </member>
+        <member name="M:Tekla.Logging.ILog.Warn(System.Object,System.Exception)">
+            <summary>Log a message object with the Warn level including the stack trace of the Exception passed as a parameter.</summary>
+            <param name="message">The message object to log.</param>
+            <param name="exception">The exception to log, including its stack trace.</param>
+        </member>
+        <member name="T:Tekla.Logging.Log4Net.Log4NetAdapter">
+            <summary>
+            The log 4 net adapter.
+            </summary>
+            <remarks>
+            Log4net is capable of outputting extended debug information about where the current
+            message was generated: class name, method name, file, line, etc. Log4net assumes that the location
+            information should be gathered relative to where Debug() was called.
+            When using Common.Logging, Debug() is called in Common.Logging.Log4Net.Log4NetLogger. This means that
+            the location information will indicate that Common.Logging.Log4Net.Log4NetLogger always made
+            the call to Debug(). We need to know where Common.Logging.ILog.Debug()
+            was called. To do this we need to use the log4net.ILog.Logger.Log method and pass in a Type telling
+            log4net where in the stack to begin looking for location information.
+            </remarks>
+        </member>
+        <member name="F:Tekla.Logging.Log4Net.Log4NetAdapter.DeclaringType">
+            <summary>
+            The declaring type.
+            </summary>
+        </member>
+        <member name="F:Tekla.Logging.Log4Net.Log4NetAdapter.logger">
+            <summary>
+            The _logger.
+            </summary>
+        </member>
+        <member name="M:Tekla.Logging.Log4Net.Log4NetAdapter.#ctor(log4net.ILog)">
+            <summary>Initializes a new instance of the <see cref="T:Tekla.Logging.Log4Net.Log4NetAdapter"/> class.</summary>
+            <param name="log">The log value.</param>
+            <exception cref="T:System.ArgumentException">Throws a argument exception.</exception>
+        </member>
+        <member name="P:Tekla.Logging.Log4Net.Log4NetAdapter.LogFile">
+            <summary>
+            Gets the log file.
+            </summary>
+        </member>
+        <member name="P:Tekla.Logging.Log4Net.Log4NetAdapter.Logger">
+            <summary>
+            Gets the logger.
+            </summary>
+        </member>
+        <member name="P:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#IsDebugEnabled">
+            <summary>
+            Gets a value indicating whether is debug enabled.
+            </summary>
+        </member>
+        <member name="P:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#IsErrorEnabled">
+            <summary>
+            Gets a value indicating whether is error enabled.
+            </summary>
+        </member>
+        <member name="P:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#IsFatalEnabled">
+            <summary>
+            Gets a value indicating whether is fatal enabled.
+            </summary>
+        </member>
+        <member name="P:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#IsInfoEnabled">
+            <summary>
+            Gets a value indicating whether is info enabled.
+            </summary>
+        </member>
+        <member name="P:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#IsTraceEnabled">
+            <summary>
+            Gets a value indicating whether is trace enabled.
+            </summary>
+        </member>
+        <member name="P:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#IsWarnEnabled">
+            <summary>
+            Gets a value indicating whether is warn enabled.
+            </summary>
+        </member>
+        <member name="M:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#Debug(System.Object)">
+            <summary>The debug.</summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#Debug(System.Object,System.Exception)">
+            <summary>The debug.</summary>
+            <param name="message">The message.</param>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="M:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#Error(System.Object)">
+            <summary>The error.</summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#Error(System.Object,System.Exception)">
+            <summary>The error.</summary>
+            <param name="message">The message.</param>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="M:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#Fatal(System.Object)">
+            <summary>The fatal.</summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#Fatal(System.Object,System.Exception)">
+            <summary>The fatal.</summary>
+            <param name="message">The message.</param>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="M:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#Info(System.Object)">
+            <summary>The info value.</summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#Info(System.Object,System.Exception)">
+            <summary>The info value.</summary>
+            <param name="message">The message.</param>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="M:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#Trace(System.Object)">
+            <summary>The trace.</summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#Trace(System.Object,System.Exception)">
+            <summary>The trace.</summary>
+            <param name="message">The message.</param>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="M:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#Warn(System.Object)">
+            <summary>The warn value.</summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Tekla.Logging.Log4Net.Log4NetAdapter.Tekla#Logging#ILog#Warn(System.Object,System.Exception)">
+            <summary>The warn value.</summary>
+            <param name="message">The message.</param>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="T:Tekla.Logging.Log4Net.RollingFileAppender">
+            <summary>
+            Appender for desktop applications (including ClickOnce) that rolls log files based on size or date or both.
+            The <see cref="T:Tekla.Logging.Log4Net.RollingFileAppender"/> extends the <seealso cref="T:log4net.Appender.RollingFileAppender"/> to override relative file names processing. 
+            </summary>
+        </member>
+        <member name="P:Tekla.Logging.Log4Net.RollingFileAppender.File">
+            <summary>
+            Gets or sets the path to the file that logging will be written to. 
+            </summary>
+            <value>The path to the file that logging will be written to.</value>
+            <remarks>
+            If the file path is relative it is taken as relative from the <seealso cref="P:System.Windows.Forms.Application.LocalUserAppDataPath"/>
+            instead of the application base directory - this is the difference with <seealso cref="M:log4net.Appender.RollingFileAppender.File"/> property.
+            </remarks>
+        </member>
+        <member name="T:Tekla.Logging.LogManager">
+            <summary>
+            Logging manager class to be used as a factory and repository to get reference to actual logger instance.
+            </summary>
+        </member>
+        <member name="M:Tekla.Logging.LogManager.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Tekla.Logging.LogManager"/> class from being created. 
+            Private constructor to prevent object creation.</summary>
+        </member>
+        <member name="M:Tekla.Logging.LogManager.GetLogger(System.Type)">
+            <summary>Get a ILog instance by type.</summary>
+            <param name="type">The type value.</param>
+            <returns>The logger instance.</returns>
+        </member>
+        <member name="T:Tekla.Logging.Tracer">
+            <summary>
+                Helper class to trace methods' entry/exit.
+                This class is similar to derives Microsoft.Practices.EnterpriseLibrary.Logging Tracer class.
+            </summary>
+        </member>
+        <member name="F:Tekla.Logging.Tracer.logger">
+            <summary>
+                The _logger.
+            </summary>
+        </member>
+        <member name="F:Tekla.Logging.Tracer.watch">
+            <summary>
+                The _watch.
+            </summary>
+        </member>
+        <member name="M:Tekla.Logging.Tracer.#ctor(Tekla.Logging.ILog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tekla.Logging.Tracer"/> class.
+            </summary>
+            <param name="logger">
+            <see cref="T:Tekla.Logging.ILog"/> object. 
+            </param>
+        </member>
+        <member name="M:Tekla.Logging.Tracer.#ctor(Tekla.Logging.ILog,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tekla.Logging.Tracer"/> class with a specified message.
+            </summary>
+            <param name="logger">
+            <see cref="T:Tekla.Logging.ILog"/> object. 
+            </param>
+            <param name="msg">
+            Message to log. 
+            </param>
+        </member>
+        <member name="M:Tekla.Logging.Tracer.Dispose">
+            <summary>
+                Logs the end of tracing.
+            </summary>
+        </member>
+    </members>
+</doc>

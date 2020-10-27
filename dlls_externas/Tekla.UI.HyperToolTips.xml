@@ -1,0 +1,1088 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tekla.UI.HyperToolTips</name>
+    </assembly>
+    <members>
+        <member name="T:Tekla.UI.HyperToolTips.NativeMethods">
+            <summary>
+            The native methods.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.WM_NCHITTEST">
+            <summary>
+            The w m_ nchittest.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.WM_NCACTIVATE">
+            <summary>
+            The w m_ ncactivate.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.WS_EX_NOACTIVATE">
+            <summary>
+            The w s_ e x_ noactivate.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.HTTRANSPARENT">
+            <summary>
+            The httransparent.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.HTLEFT">
+            <summary>
+            The htleft.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.HTRIGHT">
+            <summary>
+            The htright.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.HTTOP">
+            <summary>
+            The httop.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.HTTOPLEFT">
+            <summary>
+            The httopleft.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.HTTOPRIGHT">
+            <summary>
+            The httopright.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.HTBOTTOM">
+            <summary>
+            The htbottom.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.HTBOTTOMLEFT">
+            <summary>
+            The htbottomleft.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.HTBOTTOMRIGHT">
+            <summary>
+            The htbottomright.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.WM_USER">
+            <summary>
+            The w m_ user.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.WM_REFLECT">
+            <summary>
+            The w m_ reflect.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.WM_COMMAND">
+            <summary>
+            The w m_ command.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.CBN_DROPDOWN">
+            <summary>
+            The cb n_ dropdown.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.WM_GETMINMAXINFO">
+            <summary>
+            The w m_ getminmaxinfo.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.NativeMethods.HIWORD(System.Int32)">
+            <summary>The hiword.</summary>
+            <param name="n">The n.</param>
+            <returns>The System.Int32.</returns>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.NativeMethods.HIWORD(System.IntPtr)">
+            <summary>The hiword.</summary>
+            <param name="n">The n.</param>
+            <returns>The System.Int32.</returns>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.NativeMethods.LOWORD(System.Int32)">
+            <summary>The loword.</summary>
+            <param name="n">The n.</param>
+            <returns>The System.Int32.</returns>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.NativeMethods.LOWORD(System.IntPtr)">
+            <summary>The loword.</summary>
+            <param name="n">The n.</param>
+            <returns>The System.Int32.</returns>
+        </member>
+        <member name="T:Tekla.UI.HyperToolTips.NativeMethods.MINMAXINFO">
+            <summary>
+            The minmaxinfo.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.MINMAXINFO.reserved">
+            <summary>
+            The reserved.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.MINMAXINFO.maxSize">
+            <summary>
+            The max size.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.MINMAXINFO.maxPosition">
+            <summary>
+            The max position.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.MINMAXINFO.minTrackSize">
+            <summary>
+            The min track size.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.NativeMethods.MINMAXINFO.maxTrackSize">
+            <summary>
+            The max track size.
+            </summary>
+        </member>
+        <member name="T:Tekla.UI.HyperToolTips.PopupCloseReason">
+            <summary>
+             Reason of pop-up closing.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.PopupCloseReason.AppFocusChange">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.PopupCloseReason.AppClicked">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.PopupCloseReason.ItemClicked">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.PopupCloseReason.Keyboard">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.PopupCloseReason.CloseCalled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Tekla.UI.HyperToolTips.Popup">
+            <summary>
+            Represents a pop-up window.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.Popup._fadingInterval">
+            <summary>
+            The _fading interval.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.Popup._fadingTimer">
+            <summary>
+            The _fading timer.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.Popup._host">
+            <summary>
+            The _host.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.Popup._acceptAlt">
+            <summary>
+            The _accept alt.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.Popup._childPopup">
+            <summary>
+            The _child popup.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.Popup._content">
+            <summary>
+            The _content.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.Popup._fadingDirection">
+            <summary>
+            The _fading direction.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.Popup._fadingDuration">
+            <summary>
+            The _fading duration.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.Popup._maxOpacity">
+            <summary>
+            The _max opacity.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.Popup._ownerPopup">
+            <summary>
+            The _owner popup.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.Popup._resizable">
+            <summary>
+            The _resizable.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.Popup._useFading">
+            <summary>
+            The _use fading.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.Popup.focusOnOpen">
+            <summary>
+            The focus on open.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.Popup.#ctor(System.Windows.Forms.Control)">
+            <summary>Initializes a new instance of the <see cref="T:Tekla.UI.HyperToolTips.Popup"/> class.</summary>
+            <param name="content">The content of the pop-up.</param>
+            <remarks>Pop-up will be disposed immediately after disposion of the content control.</remarks>
+            <exception cref="T:System.ArgumentNullException"><paramref name="content"/> is 
+            <code>
+            null</code>
+            </exception>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.Popup.AcceptAlt">
+            <summary>
+            Gets or sets a value indicating whether presing the alt key should close the pop-up.
+            </summary>
+            <value><c>true</c> if presing the alt key does not close the pop-up; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.Popup.Content">
+            <summary>
+            Gets the content of the pop-up.
+            </summary>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.Popup.FadingInterval">
+            <summary>
+            Get/set fading timer interval in milleseconds. The bigger number the slower fading is.
+            <seealso cref="P:Tekla.UI.HyperToolTips.Popup.UseFading"/> should be set to <code>true</code> to turn fading effect on.
+            </summary>
+            <value>Fading timer interval in milleseconds.</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.Popup.FocusOnOpen">
+            <summary>
+            Gets or sets a value indicating whether to focus the content after the pop-up has been opened.
+            </summary>
+            <value><c>true</c> if the content should be focused after the pop-up has been opened; otherwise, <c>false</c>.</value>
+            <remarks>If the FocusOnOpen property is set to <c>false</c>, then pop-up cannot use the fade effect.</remarks>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.Popup.Resizable">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.Popup.UseFading">
+            <summary>
+            Get/set whether to use fadding while show tooltip window.
+            <seealso cref="P:Tekla.UI.HyperToolTips.Popup.FadingInterval"/> is used to define the speed of fading.
+            </summary>
+            <value><b>true</b> indicates fadding will be used.</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.Popup.CreateParams">
+            <summary>
+            Gets parameters of a new window.
+            </summary>
+            <returns>An object of type <see cref="P:Tekla.UI.HyperToolTips.Popup.CreateParams" /> used when creating a new window.</returns>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.Popup.Show(System.Windows.Forms.Control)">
+            <summary>Shows pop-up window below the specified control.</summary>
+            <param name="control">The control below which the pop-up will be shown.</param>
+            <remarks>When there is no space below the specified control, the pop-up control is shown above it.</remarks>
+            <exception cref="T:System.ArgumentNullException"><paramref name="control"/> is 
+            <code>
+            null</code>
+            </exception>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.Popup.Show(System.Windows.Forms.Control,System.Drawing.Rectangle)">
+            <summary>Shows pop-up window below the specified area of specified control.</summary>
+            <param name="control">The control used to compute screen location of specified area.</param>
+            <param name="area">The area of control below which the pop-up will be shown.</param>
+            <remarks>When there is no space below specified area, the pop-up control is shown above it.</remarks>
+            <exception cref="T:System.ArgumentNullException"><paramref name="control"/> is 
+            <code>
+            null</code>
+            </exception>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.Popup.OnClosed(System.Windows.Forms.ToolStripDropDownClosedEventArgs)">
+            <summary>Raises the <see cref="E:System.Windows.Forms.ToolStripDropDown.Closed"/> event.</summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.ToolStripDropDownClosedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.Popup.OnOpened(System.EventArgs)">
+            <summary>Raises the <see cref="E:System.Windows.Forms.ToolStripDropDown.Opened"/> event.</summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.Popup.OnOpening(System.ComponentModel.CancelEventArgs)">
+            <summary>Raises the <see cref="E:System.Windows.Forms.ToolStripDropDown.Opening"/> event.</summary>
+            <param name="e">A <see cref="T:System.ComponentModel.CancelEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.Popup.OnSizeChanged(System.EventArgs)">
+            <summary>Raises the <see cref="E:System.Windows.Forms.Control.SizeChanged"/> event.</summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.Popup.ProcessDialogKey(System.Windows.Forms.Keys)">
+            <summary>Processes a dialog box key.</summary>
+            <param name="keyData">One of the <see cref="T:System.Windows.Forms.Keys"/> values that represents the key to process.</param>
+            <returns>true if the key was processed by the control; otherwise, false.</returns>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.Popup.UpdateRegion">
+            <summary>
+            Updates the pop-up region.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.Popup.WndProc(System.Windows.Forms.Message@)">
+            <summary>Processes Windows messages.</summary>
+            <param name="m">The Windows <see cref="T:System.Windows.Forms.Message"/> to process.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.Popup.FadeIn">
+            <summary>
+            The fade in.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.Popup.FadeOut">
+            <summary>
+            The fade out.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.Popup.InternalProcessResizing(System.Windows.Forms.Message@)">
+            <summary>The internal process resizing.</summary>
+            <param name="m">The m.</param>
+            <returns>The System.Boolean.</returns>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.Popup.OnFadingTimer(System.Object,System.EventArgs)">
+            <summary>The on fading timer.</summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.Popup.SetOwnerItem(System.Windows.Forms.Control)">
+            <summary>The set owner item.</summary>
+            <param name="control">The control.</param>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.Popup.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.Popup.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.Popup.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Tekla.UI.HyperToolTips.HoverTracker">
+            <summary>
+            Helper class to track mouse movements and to hide a tip window when mouse goes out of baundaries of the control.
+            Instance of this class is not responsible for hiding hyperTooltip window it just tracks mouse and fire "Hoverout" event
+            when mouse pointer goes put of boundaries.
+            Instance of this class typically reused for all tip popups on the form because tip popups are shown one after another (not semultenously)
+            that is why control and popup to track is not passed in the constructor, <see cref="M:Tekla.UI.HyperToolTips.HoverTracker.Start(System.Object,Tekla.UI.HyperToolTips.Popup)"/> method should be called to start actual tracking.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HoverTracker._checkInterval">
+            <summary>
+            The _check interval.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HoverTracker._control">
+            <summary>
+            The _control.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HoverTracker._timerTrackHoverout">
+            <summary>
+            The _timer track hoverout.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HoverTracker._wnd">
+            <summary>
+            The _wnd.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HoverTracker.disposed">
+            <summary>
+            The disposed.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HoverTracker.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tekla.UI.HyperToolTips.HoverTracker"/> class. 
+            Contructs tracker instance.
+            Instance of this class typically reused for all tip popups on the form because tip popups are shown one after another (not semultenously)
+            that is why control and popup to track is not passed in the constructor, <see cref="M:Tekla.UI.HyperToolTips.HoverTracker.Start(System.Object,Tekla.UI.HyperToolTips.Popup)"/> method should be called to start actual tracking.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HoverTracker.Finalize">
+            <summary>
+            Finalizes an instance of the <see cref="T:Tekla.UI.HyperToolTips.HoverTracker"/> class. 
+            </summary>
+        </member>
+        <member name="T:Tekla.UI.HyperToolTips.HoverTracker.TrackerEventHandler">
+            <summary>
+            Represents the method that will handle the <see cref="E:Tekla.UI.HyperToolTips.HoverTracker.TrackingStopped"/> events of a <see cref="T:Tekla.UI.HyperToolTips.HoverTracker"/>.
+            </summary>
+        </member>
+        <member name="E:Tekla.UI.HyperToolTips.HoverTracker.TrackingStopped">
+            <summary>
+            Occurs right after tracking is stoped, because e.g. mouse goes out of boundaries of the tracked region.
+            This event is fired also if tracking is cancelled or stopped by any other reason.
+            Typically this event is used to hide tooltip popup window.
+            </summary>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HoverTracker.CheckInterval">
+            <summary>
+            Gets or sets time interval in ms used to check mouse movements. Default is 100ms.
+            </summary>
+            <value>Time interval in ms used to check mouse movements</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HoverTracker.Control">
+            <summary>
+            Control (UI element) beeing tracked.
+            </summary>
+            <value>Control (UI element) beeing tracked. <code>null</code> if nothing tracked currently.</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HoverTracker.Popup">
+            <summary>
+            <seealso cref="P:Tekla.UI.HyperToolTips.HoverTracker.Popup"/> window beeing tracked.
+            </summary>
+            <value><seealso cref="P:Tekla.UI.HyperToolTips.HoverTracker.Popup"/> window beeing tracked. <code>null</code> if nothing tracked currently.</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HoverTracker.Tracking">
+            <summary>
+            Whether the instance currently tracking mouse movements or not?
+            </summary>
+            <value><b>true</b> if mouse movements are tracking currently</value>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HoverTracker.Dispose">
+            <summary>
+             Implements IDisposable.
+             Do not make this method virtual.
+             A derived class should not be able to override this method.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HoverTracker.Start(System.Object,Tekla.UI.HyperToolTips.Popup)">
+            <summary>Starts tracking for mouse movements.
+            When mouse pointer goes out of both control and tip window boundaries then <see cref="E:Tekla.UI.HyperToolTips.HoverTracker.TrackingStopped"/> event is fired.
+            If this instance of tracker is currently tracking something else then current tracker is stoped (<seealso cref="E:Tekla.UI.HyperToolTips.HoverTracker.TrackingStopped"/>
+            fired) and new one is started.</summary>
+            <param name="control">UI element/control for which tooltip is displayed</param>
+            <param name="hyperWnd">HyperTooltip window</param>
+            <exception cref="T:System.ArgumentNullException">control or hyperWnd arguments is <b>null</b></exception>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HoverTracker.Stop">
+            <summary>
+            Stops tracking (don't destroy/hide tracked popup), do nothing if nothing is tracked currently.
+            Fire <seealso cref="E:Tekla.UI.HyperToolTips.HoverTracker.TrackingStopped"/> event.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HoverTracker.Dispose(System.Boolean)">
+            <summary>Dispose(bool disposing) executes in two distinct scenarios.
+            If disposing equals true, the method has been called directly
+            or indirectly by a user's code. Managed and unmanaged resources
+            can be disposed.
+            If disposing equals false, the method has been called by the 
+            runtime from inside the finalizer and you should not reference 
+            other objects. Only unmanaged resources can be disposed.</summary>
+            <param name="disposing">The disposing.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HoverTracker.OnTrackingStopped(Tekla.UI.HyperToolTips.HoverTracker.TrackerEventArgs)">
+            <summary>Raises the <see cref="E:Tekla.UI.HyperToolTips.HoverTracker.TrackingStopped"/> event.</summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HoverTracker.CheckForHoverout">
+            <summary>
+            The check for hoverout.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HoverTracker.TimerHandler(System.Object,System.EventArgs)">
+            <summary>The timer handler.</summary>
+            <param name="sender">The sender.</param>
+            <param name="args">The args.</param>
+        </member>
+        <member name="T:Tekla.UI.HyperToolTips.HoverTracker.TrackerEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Tekla.UI.HyperToolTips.HoverTracker.TrackingStopped"/> event. 
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HoverTracker.TrackerEventArgs._control">
+            <summary>
+            The _control.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HoverTracker.TrackerEventArgs._wnd">
+            <summary>
+            The _wnd.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HoverTracker.TrackerEventArgs.#ctor(Tekla.UI.HyperToolTips.Popup,System.Object)">
+            <summary>Initializes a new instance of the <see cref="T:Tekla.UI.HyperToolTips.HoverTracker.TrackerEventArgs"/> class. 
+            Creates a new instance of a <see cref="T:Tekla.UI.HyperToolTips.HoverTracker.TrackerEventArgs"/> object.</summary>
+            <param name="wnd">The <see cref="P:Tekla.UI.HyperToolTips.HoverTracker.TrackerEventArgs.Popup"/> to be shown.</param>
+            <param name="control">The UI element for which the HyperToolTip was displayed.</param>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HoverTracker.TrackerEventArgs.Control">
+            <summary>
+            Gets the UI element/control for which the tip is displayed.
+            </summary>
+            <value>The Object for which the tip is displayed. For example, on a toolbar control, this would be an instance of a toolbar button object.</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HoverTracker.TrackerEventArgs.Popup">
+            <summary>
+            Gets the <see cref="P:Tekla.UI.HyperToolTips.HoverTracker.TrackerEventArgs.Popup"/> was tracked.
+            </summary>
+            <value>The <see cref="P:Tekla.UI.HyperToolTips.HoverTracker.TrackerEventArgs.Popup"/> to be shown.</value>
+            <remarks>You can modify properties of the window to alter the tip before it is shown.</remarks>
+        </member>
+        <member name="T:Tekla.UI.HyperToolTips.HyperToolTipPopup">
+            <summary>
+            Specialized popup for Office-2007-like tooltips.
+            Typically created automatically by <seealso cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/> to show HyperToolTip. 
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipPopup._url">
+            <summary>
+            The _url.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipPopup.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipPopup"/> class. 
+            Creates HyperToolTipPopup.
+            </summary>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipPopup.TipUrl">
+            <summary>
+            Get/set url to tip content to show when <see cref="M:Tekla.UI.HyperToolTips.Popup.Show(System.Windows.Forms.Control)"/> method called.
+            </summary>
+            <value>url to tip content.</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipPopup.WebBrowser">
+            <summary>
+            Create a strongly typed property called WebBrowser - handy to prevent casting everywhere.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipPopup.CreateControlInstance">
+            <summary>
+            Create the actual control, note this is static so it can be called from the
+            constructor.
+            </summary>
+            <returns>
+            The System.Windows.Forms.Control.
+            </returns>
+        </member>
+        <member name="T:Tekla.UI.HyperToolTips.TipLoader">
+            <summary>
+            Helper class to prepare a form for HyperToolTips support. Allow to attache HyperToolTips to all UI elements on the form.
+            Enumerates all controls and toolbars inside form and attachs nesessary handles to show/hide tooltips to each control.
+            Controls Tag property is used as a TipContextId. For all <see cref="T:System.Windows.Forms.Control"/>s and <see cref="T:System.Windows.Forms.ToolStripItem"/>s
+            with not empty tags tooltip is attached.
+            
+            These helpers can be used to add HyperToolTips programmically on runtime,
+            but it is not recomended, design time support in <seealso cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/> should be used instead.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.TipLoader.PopulateWithAllControls(System.Windows.Forms.Form,Tekla.UI.HyperToolTips.HyperToolTipProvider)">
+            <summary>Populate hyper tooltips provider with all <see cref="T:System.Windows.Forms.Control"/>s and <see cref="T:System.Windows.Forms.ToolStripItem"/>s found on the form.
+            UI element's Tag property is used as HyperToolTipId.</summary>
+            <param name="form"><see cref="T:System.Windows.Forms.Form"/> to enumerate UI elements in.</param>
+            <param name="provider"><see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/> instance to populate</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.TipLoader.PopulateWithToolbars(System.Windows.Forms.Form,Tekla.UI.HyperToolTips.HyperToolTipProvider)">
+            <summary>Populate hyper tooltips provider with all toolbars found on the form.<see cref="T:System.Windows.Forms.ToolStripItem"/>'s Tag property is used as HyperToolTipId.
+            Attaches tooltips only to toolbar on the form.</summary>
+            <param name="form"><see cref="T:System.Windows.Forms.Form"/> to enumerate UI elements in.</param>
+            <param name="provider"><see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/> instance to populate</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.TipLoader.AddEventHandlers(System.Windows.Forms.Control,Tekla.UI.HyperToolTips.HyperToolTipProvider)">
+            <summary>The add event handlers.</summary>
+            <param name="control">The control.</param>
+            <param name="provider">The provider.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.TipLoader.AddEventHandlers(System.Windows.Forms.ToolStrip,Tekla.UI.HyperToolTips.HyperToolTipProvider)">
+            <summary>The add event handlers.</summary>
+            <param name="control">The control.</param>
+            <param name="provider">The provider.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.TipLoader.AddEventHandlers(System.Windows.Forms.ToolStripItem,Tekla.UI.HyperToolTips.HyperToolTipProvider)">
+            <summary>The add event handlers.</summary>
+            <param name="control">The control.</param>
+            <param name="provider">The provider.</param>
+        </member>
+        <member name="T:Tekla.UI.HyperToolTips.HyperToolTipProvider">
+            <summary>
+            This class is similar to standard <seealso cref="T:System.Windows.Forms.ToolTip"/>, it provides support for attaching HyperToolTips to various UI elements
+            (<see cref="T:System.Windows.Forms.ToolStripItem"/> and <see cref="T:System.Windows.Forms.Control"/> are supported at the moment).
+            
+            Typically <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/> is populated by autogenerated designer code.
+            You have to drop <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/> to <see cref="T:System.Windows.Forms.Form"/> or <see cref="T:System.Windows.Forms.UserControl"/> in VS designer and
+            then fill HyperToolTipId property for each UI element you want to have a HyperToolTip.
+            
+            <seealso cref="T:Tekla.UI.HyperToolTips.TipLoader"/> can be used also to populate <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/> with controls in form,
+            but it is not recomended way to use <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/>.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.BigSizeSuffix">
+            <summary>
+            The big size suffix.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.Ext">
+            <summary>
+            The ext value.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.contextIds">
+            <summary>
+            The _context ids.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.filesInChmLock">
+            <summary>
+            The _files in chm lock.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.hoverTracker">
+            <summary>
+            The _hover tracker.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.lastPopupVisible">
+            <summary>
+            The _last popup visible.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.showTimer">
+            <summary>
+            The _show timer.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.active">
+            <summary>
+            The _active.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.fadingInterval">
+            <summary>
+            The _fading interval.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.filesInChm">
+            <summary>
+            The _files in chm.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.initialDelay">
+            <summary>
+            The _initial delay.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.namespaceName">
+            <summary>
+            The _namespace.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.opacity">
+            <summary>
+            The _opacity.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.popupSizeLarge">
+            <summary>
+            The _popup size large.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.popupSizeNormal">
+            <summary>
+            The _popup size normal.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.reshowDelay">
+            <summary>
+            The _reshow delay.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.showAlways">
+            <summary>
+            The _show always.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.useFading">
+            <summary>
+            The _use fading.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/> class. 
+            Initializes a new instance of the <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/> without a specified container. 
+            </summary>
+            <remarks>
+            The <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/> constructor associates the <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/> class with the container that is creating the instance of the control.
+            </remarks>
+            <example>
+            The following code example creates an instance of the <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/> class and associates the instance with the 
+            <seealso cref="T:System.Windows.Forms.Form"/>
+            that the instance is created within.
+            The code then initializes the delay properties AutoPopDelay, <see cref="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.InitialDelay"/>, and <see cref="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.ReshowDelay"/>.
+            In addition the instance of the <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/> class sets the <see cref="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.ShowAlways"/> property to <b>true.</b> to enable <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/> text to be displayed regardless of whether the form is active.
+            Finally, the example associates HyperToolTip with two controls on a form, a <see cref="T:System.Windows.Forms.Button"/> and a <see cref="T:System.Windows.Forms.CheckBox"/>.
+            The code example requires that the method defined in the example is located within a 
+            <seealso cref="T:System.Windows.Forms.Form"/>
+            that contains a <see cref="T:System.Windows.Forms.Button"/> control named button1 and a <see cref="T:System.Windows.Forms.CheckBox"/> control named checkBox1,
+            and that the method is called from the constructor of the 
+            <seealso cref="T:System.Windows.Forms.Form"/>
+            <code>
+            // This example assumes that the Form_Load event handling method
+            // is connected to the Load event of the form.
+            private void Form1_Load(object sender, System.EventArgs e)
+            {
+                // Create the ToolTip and associate with the Form container.
+                HyperToolTipProvider hyperToolTipProvider1 = new HyperToolTipProvider();
+            
+                // Set up the delays for the HyperToolTip.
+                hyperToolTipProvider1.InitialDelay = 1000;
+                // Force the ToolTip text to be displayed whether or not the form is active.
+                hyperToolTipProvider1.ShowAlways = true;
+            
+                // Set up the ToolTip text for the Button and Checkbox.
+                hyperToolTipProvider1.SetHyperToolTipCId(this.button1, "button.1");
+                hyperToolTipProvider1.SetHyperToolTipCId(this.checkBox1, "checkBox.1");
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.#ctor(System.ComponentModel.IContainer)">
+            <summary>Initializes a new instance of the <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/> class with a specified container.</summary>
+            <param name="container">An <seealso cref="T:System.ComponentModel.IContainer"/>
+            that represents the container of the <seealso cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/>
+            </param>
+            <remarks>The <seealso cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/>
+            constructor enables you to associate a <seealso cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/>
+            with any container.
+            A <seealso cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/>
+            releases its resources when its container closes or is finalized.</remarks>
+        </member>
+        <member name="T:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipEventHandler">
+            <summary>
+            Represents the method that will handle the <see cref="E:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipPopup"/> events of a <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/>.
+            </summary>
+        </member>
+        <member name="E:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipPopup">
+            <summary>
+            Occurs before a HyperToolTip is displayed.
+            This event can be used to prevent tooltip from being displayed or to change <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipPopup"/> apperance and/or content.
+            </summary>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.Active">
+            <summary>
+            Controls whether hyper tooltips should be displayed or not.
+            </summary>
+            <value><b>true.</b> if the HyperTooltip is currently active; otherwise, <b>false.</b>. The default is <b>true.</b>.</value>
+            <remarks>
+            With the Active property, you can enable or disable the display of HyperTooltip text for all controls that have text specified by this particular <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/> component.
+            Although more than one <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/> component can be created and assigned to a form, setting the <b>Active.</b> property to <b>false.</b> only affects the current <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider"/>.
+            You can enable users to set the value of this property in a form that provides application options.
+            These options, in turn, provide the user with the ability to enable or disable the display of HyperTooltips in your application.
+            </remarks>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.Debug">
+            <summary>
+            Gets or sets a value indicating debug execution mode.
+            Debug mode to be used by documentation team to get information about TipContextIds associated with controls.
+            When <b>true.</b> TipContextId value is placed to clipboard on mouse over the control and SHIFT pressed.
+            </summary>
+            <value>value indicating debug execution mode.</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.FadingInterval">
+            <summary>
+            Get/set total fading time in milleseconds. The bigger number the slower fading is.
+            <seealso cref="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.UseFading"/> should be set to <b>true.</b> to turn fading effect on.
+            </summary>
+            <value>Total time of fading interval in milleseconds.</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.InitialDelay">
+            <summary>
+            Gets or sets the amount of time which passes, in milliseconds, before a tip is displayed.
+            </summary>
+            <value>The period of time, in milliseconds, that the pointer must remain stationary on a control before the ToolTip window is displayed.</value>
+            <remarks>
+            With the InitialDelay property, you can shorten or lengthen the time that the ToolTip waits before displaying a ToolTip window.
+            If the value of the InitialDelay property is set to a value that is too long in duration,
+            the user of your application might not know that your application provides ToolTip Help.
+            You can use this property to ensure that the user has ToolTips displayed quickly by shortening the time specified.
+            </remarks>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.Opacity">
+            <summary>
+            Get/set opacity for tooltip window. If <see cref="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.UseFading"/> is <b>true.</b> this is a maximum opacity.
+            </summary>
+            <value>Opacity for tooltip window.</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.PopupSizeLarge">
+            <summary>
+            Get/set a large size for popup tooltip window. This size is used in case othervise is not specified.
+            </summary>
+            <value>Size of the popup window with HypetTooltip used in case '_l' suffix is added to html file name.</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.PopupSizeNormal">
+            <summary>
+            Get/set a normal size for popup tooltip window. This size is used in case othervise is not specified.
+            </summary>
+            <value>Size of the popup window with HypetTooltip used in case othervise is not specified.</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.ReshowDelay">
+            <summary>
+            Gets or sets the length of time that must transpire before subsequent ToolTip windows appear as the mouse pointer moves from one control to another.
+            </summary>
+            <value>The length of time (in milliseconds) that it takes subsequent ToolTip windows to appear.</value>
+            <remarks>
+            This property enables you to shorten or lengthen the time that the ToolTip waits before displaying a ToolTip window
+            after a previous ToolTip window is displayed.
+            The first time a ToolTip window is displayed the value of the <see cref="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.InitialDelay"/> property is used to determine the delay
+            to apply before initially showing the ToolTip window. When a ToolTip window is currently being displayed
+            and the user moves the cursor to another control that displays a ToolTip window,
+            the value of the <see cref="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.ReshowDelay"/> property is used before showing the ToolTip for the new control.
+            The ToolTip window from the previous control must still be displayed in order for the delay specified in the <see cref="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.ReshowDelay"/> property to be used;
+            otherwise the InitialDelay property value is used.
+            </remarks>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.ShowAlways">
+            <summary>
+            Gets or sets a value indicating whether a HyperToolTip window is displayed, even when its parent control is not active.
+            </summary>
+            <value><b>true.</b> if the HyperToolTip is always displayed; otherwise, <b>false.</b>. The default is <b>false.</b>.</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipsNamespace">
+            <summary>
+            Gets or sets a value specifying the name of the Help file to get tips' content from.
+            </summary>
+            <value>The name of the Help file. This can be of the form C:\path\tooltips.chm or /folder/sample.chm.</value>
+            <remarks>
+            The file name retrieved by this method identifies the file that provides HyperTooltip support for all the controls for which this object provides Tips.
+            This file name can designate a compiled Help (.chm).
+            <seealso cref="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.GetTipInfo(System.Object)"/> use this propety to build full url to the tip content.
+            </remarks>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.UseFading">
+            <summary>
+            Get/set whether to use fadding while show tooltip window.
+            <seealso cref="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.FadingInterval"/> is used to define the speed of fading.
+            </summary>
+            <value><b>true.</b> indicates fadding will be used.</value>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.CanExtend(System.Object)">
+            <summary>Indicates whether this object can provide its extender properties to the specified object.
+            This class can extend <see cref="T:System.Windows.Forms.ToolStripItem"/> and <see cref="T:System.Windows.Forms.Control"/>.</summary>
+            <param name="target">The object to receive the extender properties.</param>
+            <returns><b>true.</b> if this object can provide extender properties to the specified object; otherwise, <b>false.</b>.</returns>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.GetHyperToolTipId(System.Object)">
+            <summary>This is the extended property for the HyperTooltipId property.</summary>
+            <param name="control">An item (<see cref="T:System.Windows.Forms.Control"/> or <see cref="T:System.Windows.Forms.ToolStripItem"/>) for which Tip will be displayed.</param>
+            <returns>id of HyperToolTip for the control to find content, 
+            <code>
+            string.Empty.</code>
+            if <paramref name="control"/> is not registered.</returns>
+            <exception cref="T:System.ArgumentNullException">if control is <b>null.</b>.</exception>
+            <exception cref="T:System.ArgumentException">if control's type is not supported.</exception>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.SetHyperToolTipId(System.Object,System.String)">
+            <summary>This is the extended property for the HyperTooltipId property.
+            Note that for <seealso cref="T:System.Windows.Forms.TabPage"/>
+            it is important to call this method after tab is added to <seealso cref="T:System.Windows.Forms.TabControl"/>
+            </summary>
+            <param name="control">An <see cref="T:System.Windows.Forms.ToolStripItem"/> or <see cref="T:System.Windows.Forms.Control"/> for which Tip will be displayed.</param>
+            <param name="value">id of HyperToolTip for the control to find content. If 
+            <code>
+            null.</code>
+            or 
+            <code>
+            string.Empty.</code>
+            hyperTooltipId is removed.</param>
+            <exception cref="T:System.ArgumentNullException">if control is 
+            <code>
+            null.</code>
+            </exception>
+            <exception cref="T:System.ArgumentException">if control's type is not supported.</exception>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.Dispose(System.Boolean)">
+            <summary>Clean up any resources being used.</summary>
+            <param name="disposing">True if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.GetFileName(System.String)">
+            <summary>Maps <seealso cref="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.SetHyperToolTipId(System.Object,System.String)"/>
+            to filenames inside CHM file.
+            It is required because file name can have additional suffixes that used e.g. to specify tip window size.</summary>
+            <param name="id">HyperTooltipId (<seealso cref="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.SetHyperToolTipId(System.Object,System.String)"/>
+            ) for the UI element.</param>
+            <returns>filename inside CHM that corresponds to id passed, 
+            <code>
+            null.</code>
+            if file for this id wasn't found.</returns>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.GetTipInfo(System.Object)">
+            <summary>Builds Tip's content url using values set with <seealso cref="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipsNamespace"/>
+            and <seealso cref="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.SetHyperToolTipId(System.Object,System.String)"/>
+            If <seealso cref="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipsNamespace"/>
+            specifies relative path then <see cref="P:System.AppDomain.BaseDirectory"/> is user to combine a full path.
+            Can be overwritten to define another url scheme to find tips' content.
+            Also extract other tip attibutes that can be specified by documentor in tip's content file.</summary>
+            <param name="control">An item (<see cref="T:System.Windows.Forms.Control"/> or <see cref="T:System.Windows.Forms.ToolStripItem"/>) for which Tip will be displayed.</param>
+            <returns><seealso cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipInfo"/>
+            filled with information about the hypertooltip if it is defined and to be shown, <b>null.</b> othewize (if hypertooltip is not defined for this control).</returns>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.OnTipPopup(Tekla.UI.HyperToolTips.HyperToolTipProvider.TipEventArgs)">
+            <summary>Raises the <see cref="E:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipPopup"/> event.</summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.Attach(System.Windows.Forms.ToolStripItem)">
+            <summary>The attach.</summary>
+            <param name="ctrl">The ctrl.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.Attach(System.Windows.Forms.Control)">
+            <summary>The attach.</summary>
+            <param name="ctrl">The ctrl.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.BuildFileNamesCache">
+            <summary>
+            The build file names cache.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.Deattach(System.Windows.Forms.ToolStripItem)">
+            <summary>The deattach.</summary>
+            <param name="ctrl">The ctrl.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.Deattach(System.Windows.Forms.Control)">
+            <summary>The deattach.</summary>
+            <param name="ctrl">The ctrl.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.HoverTrackerTrackingStoped(System.Object,Tekla.UI.HyperToolTips.HoverTracker.TrackerEventArgs)">
+            <summary>The hover tracker_ tracking stoped.</summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The e value.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.OnMouseDown(System.Object,System.EventArgs)">
+            <summary>The on mouse down.</summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The e value.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.OnMouseEntered(System.Object,System.EventArgs)">
+            <summary>The on mouse entered.</summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The e value.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.OnMouseLeave(System.Object,System.EventArgs)">
+            <summary>The on mouse leave.</summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The e value.</param>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.ShowTip(System.Object)">
+            <summary>This methos called when it is actually time to show the popup tip window.
+            The method should determine whether hypertooltip should be shown (is defined) or not.
+            It is responsible for attaching all nesesary handlers to track mouse etc. to hide tip window on a right time.</summary>
+            <param name="sender">The sender.</param>
+        </member>
+        <member name="T:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipPopup"/> event. 
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipEventArgs.instance">
+            <summary>
+            The _instance.
+            </summary>
+        </member>
+        <member name="F:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipEventArgs.wnd">
+            <summary>
+            The _wnd value.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipEventArgs.#ctor(Tekla.UI.HyperToolTips.Popup,System.Object)">
+            <summary>Initializes a new instance of the <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipEventArgs"/> class. 
+            Creates a new instance of a <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipEventArgs"/> object.</summary>
+            <param name="wnd">The <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipPopup"/> to be shown.</param>
+            <param name="instance">The object for which the HyperToolTip was displayed.</param>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipEventArgs.Cancel">
+            <summary>
+            Gets or sets whether the tip is prevented from being displayed.
+            </summary>
+            <value><b>True.</b> if the tip should not be displayed; otherwise, <b>false.</b>, and the tip is displayed.</value>
+            <remarks>This property is only used with the <see cref="E:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipPopup"/> event.</remarks>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipEventArgs.Instance">
+            <summary>
+            Gets the object for which the tip is displayed.
+            </summary>
+            <value>The Object for which the tip is displayed. For example, on a toolbar control, this would be an instance of a toolbar button object.</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipEventArgs.Window">
+            <summary>
+            Gets the <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipPopup"/> to be shown.
+            </summary>
+            <value>The <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipPopup"/> to be shown.</value>
+            <remarks>You can modify properties of the window to alter the tip before it is shown.</remarks>
+        </member>
+        <member name="T:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipInfo">
+            <summary>
+            Information about the tip required to show popup.
+            If <see cref="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipInfo.ContentExists"/> is <b>false.</b> then all other properties except <see cref="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipInfo.Id"/> are undefined.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipInfo.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipInfo"/> class.</summary>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipInfo.ContentExists">
+            <summary>Gets or sets a value indicating whether the hypertooltip is found inresources.</summary>
+            <value>The content exists.</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipInfo.Id">
+            <summary>Gets or sets the HyperTooltipId defined via <seealso cref="M:Tekla.UI.HyperToolTips.HyperToolTipProvider.SetHyperToolTipId(System.Object,System.String)"/>.</summary>
+            <value>The id value.</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipInfo.Size">
+            <summary>Gets or sets the <seealso cref="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipInfo.Size"/> of the tip window to show.</summary>
+            <value>The size value.</value>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.HyperToolTipProvider.TipInfo.Url">
+            <summary>Gets or sets the url to content of the tip to display, <b>null.</b> if tip is not to be shown.</summary>
+            <value>The url value.</value>
+        </member>
+        <member name="T:Tekla.UI.HyperToolTips.ToolTipPopup">
+            <summary>
+            Class to show popups similar to standard tooltips
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.ToolTipPopup.#ctor(System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Tekla.UI.HyperToolTips.ToolTipPopup"/> class. 
+            Constracts a popup that shows the text specified.</summary>
+            <param name="text">Text to show in popup</param>
+        </member>
+        <member name="P:Tekla.UI.HyperToolTips.ToolTipPopup.Label">
+            <summary>
+            Create a strongly typed property called Label - handy to prevent casting everywhere.
+            </summary>
+        </member>
+        <member name="M:Tekla.UI.HyperToolTips.ToolTipPopup.CreateControlInstance(System.String)">
+            <summary>Create the actual control, note this is static so it can be called from the
+            constructor.</summary>
+            <param name="text">The text.</param>
+            <returns>The System.Windows.Forms.Control.</returns>
+        </member>
+    </members>
+</doc>
