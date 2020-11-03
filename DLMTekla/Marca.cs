@@ -19,6 +19,9 @@ namespace TeklaMedabilAPIs
         private Etapa _etapa { get; set; }
         public string nome { get; set; } = "";
 
+        public double peso { get; set; } = 0;
+        public int quantidade { get; set; } = 0;
+
         private List<Part> _pecas { get; set; }
 
         public List<Part> GetPecas(bool reset = false)
@@ -45,8 +48,19 @@ namespace TeklaMedabilAPIs
         {
             this.pecaTekla = peca;
             this.modelo = modelo;
-            this.nome = this.pecaTekla.AssemblyNumber.Prefix + "-" + this.pecaTekla.AssemblyNumber.StartNumber;
+            //this.nome = this.pecaTekla.AssemblyNumber.Prefix + "-" + this.pecaTekla.AssemblyNumber.StartNumber;
             //this.tipo = ((Part)peca.GetMainPart()).GetType().ToString();
+            string nome = "";
+            var ok = this.pecaTekla.GetReportProperty("ASSEMBLY_POS", ref nome);
+            this.nome = nome;
+
+            int qtd = 0;
+            ok = this.pecaTekla.GetReportProperty("NUMBER", ref qtd);
+            this.quantidade = qtd;
+
+            double peso = 0;
+            ok = this.pecaTekla.GetReportProperty("WEIGHT_NET", ref peso);
+            this.peso = peso;
         }
     }
     public class Etapa

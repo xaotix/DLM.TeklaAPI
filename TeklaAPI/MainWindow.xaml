@@ -7,9 +7,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" Closing="Window_Closing">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
         <WrapPanel>
             <Button Content="Selecionar Etapa..." Click="selecionar_etapa"></Button>
             <Button Content="Carregar todos os parts..." Click="Button_Click"></Button>
         </WrapPanel>
+
+        <DataGrid CanUserDeleteRows="False" Name="lista" Grid.Row="2" IsReadOnly="True" CanUserAddRows="False" AutoGenerateColumns="False" SelectionMode="Extended" HeadersVisibility="Column">
+            <DataGrid.Columns>
+
+                <DataGridTextColumn  Header="Marca" Binding="{Binding nome}" />
+                <DataGridTextColumn  Header="Quantidade" Binding="{Binding quantidade}" />
+                <DataGridTextColumn  Header="Peso" Binding="{Binding peso}" />
+
+            </DataGrid.Columns>
+          
+        </DataGrid>
+
     </Grid>
 </Window>

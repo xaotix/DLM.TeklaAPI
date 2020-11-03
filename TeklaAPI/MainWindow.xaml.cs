@@ -49,9 +49,12 @@ namespace TeklaMedabilAPIs
             var sel = Conexoes.Utilz.SelecionarObjeto(etapas,null,"Selecione");
             var pcs = modelo.GetMarcas(sel);
             modelo.ResetVisuais();
-            modelo.SetVisivel(modelo.GetMarcas(), false);
-            modelo.SetVisivel(pcs, false);
-            modelo.SetCor(pcs,TeklaMedabilAPIs.Funcoes.GetCor());
+            //modelo.SetVisivel(modelo.GetMarcas(), false);
+            //modelo.SetVisivel(pcs, false);
+            //modelo.SetCor(pcs,TeklaMedabilAPIs.Funcoes.GetCor());
+
+            this.lista.ItemsSource = null;
+            this.lista.ItemsSource = pcs;
           
         }
 
