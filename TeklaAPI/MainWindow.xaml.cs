@@ -28,8 +28,7 @@ namespace TeklaMedabilAPIs
         public MainWindow()
         {
             InitializeComponent();
-            modelo = new ModeloTekla();
-            if (!modelo.modeloAberto)
+            if (!Consultas.modelo.modeloAberto)
             {
                 MessageBox.Show("Nenhuma instância do Tekla encontrada. \nAbra um modelo no Tekla para poder iniciar.");
                 Environment.Exit(0);
@@ -41,17 +40,11 @@ namespace TeklaMedabilAPIs
            
 
         }
-        public ModeloTekla modelo { get; set; }
         private void selecionar_etapa(object sender, RoutedEventArgs e)
         {
             
-            var etapas = modelo.GetEtapas();
-            var sel = Conexoes.Utilz.SelecionarObjeto(etapas,null,"Selecione");
-            var pcs = modelo.GetMarcas(sel);
-            modelo.ResetVisuais();
-            //modelo.SetVisivel(modelo.GetMarcas(), false);
-            //modelo.SetVisivel(pcs, false);
-            //modelo.SetCor(pcs,TeklaMedabilAPIs.Funcoes.GetCor());
+            var pcs = Consultas.SelecionarEtapa();
+
 
             this.lista.ItemsSource = null;
             this.lista.ItemsSource = pcs;
@@ -60,28 +53,19 @@ namespace TeklaMedabilAPIs
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (modelo.modeloAberto)
+            if (Consultas.modelo.modeloAberto)
             {
-                modelo.ResetVisuais();
+                Consultas.modelo.ResetVisuais();
             }
                 Environment.Exit(0);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+
+        private void importar_st_pecas(object sender, RoutedEventArgs e)
         {
-            Stopwatch pp = new Stopwatch();
-            pp.Start();
+            Consultas.ImportarSAP();
            
-            var pos = modelo.GetPosicoes();
-            pp.Stop();
-            MessageBox.Show($" {pos.Count} Parts encontrados.\n"  + pp.Elapsed.ToString());
-
-            pp.Reset();
-            pp.Start();
-           var ss = modelo.GetMarcas();
-            pp.Stop();
-            MessageBox.Show($"{ss.Count} Assemblies encontrados.\n" + pp.Elapsed.ToString());
-
         }
     }
 }

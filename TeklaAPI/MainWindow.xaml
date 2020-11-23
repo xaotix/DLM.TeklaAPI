@@ -11,10 +11,14 @@
             <RowDefinition Height="25"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <WrapPanel>
-            <Button Content="Selecionar Etapa..." Click="selecionar_etapa"></Button>
-            <Button Content="Carregar todos os parts..." Click="Button_Click"></Button>
-        </WrapPanel>
+        <Menu VerticalAlignment="Center">
+            <MenuItem Header="Ferramentas">
+                <MenuItem Header="Importar Status de Peças..." Click="importar_st_pecas"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Testes">
+            <MenuItem Header="Selecionar Etapa..." Click="selecionar_etapa"></MenuItem>
+            </MenuItem>
+        </Menu>
 
         <DataGrid CanUserDeleteRows="False" Name="lista" Grid.Row="2" IsReadOnly="True" CanUserAddRows="False" AutoGenerateColumns="False" SelectionMode="Extended" HeadersVisibility="Column">
             <DataGrid.Columns>

@@ -15,6 +15,16 @@ namespace TeklaMedabilAPIs
 {
     public class ModeloTekla
     {
+        public void Set(string propriedade, string valor)
+        {
+            modelo.GetProjectInfo().SetUserProperty(propriedade, valor);
+        }
+        public string Get(string propriedade)
+        {
+            string valor = "";
+            modelo.GetProjectInfo().GetUserProperty(propriedade, ref valor);
+            return valor;
+        }
         private Model _modelo { get; set; }
         public Model modelo
         {
@@ -45,40 +55,11 @@ namespace TeklaMedabilAPIs
             }
             return _etapas;
         }
-        public List<Marca> GetMarcas(Etapa Etapa)
-        {
-            List<Marca> retorno = new List<Marca>();
-            foreach(var s in this.GetMarcas())
-            {
-                if(s.GetEtapa().numero ==Etapa.numero)
-                {
-                    retorno.Add(s);
-                }
-            }
-            return retorno;
-        }
-        public Etapa GetEtapa(Marca peca)
-        {
-            Phase s;
-           var p = peca.pecaTekla.GetPhase(out s);
-            if(p)
-            {
-                var sp = this.GetEtapas().Find(x => x.numero == s.PhaseNumber);
-                if(sp!=null)
-                {
-                return sp;
-
-                }
-            }
-            return new Etapa(new Phase(),this);
-        }
-
         private List<Marca> _marcas { get; set; }
-
-
-        public List<Marca> GetMarcas(bool update = false, Assembly.AssemblyTypeEnum tipo = Assembly.AssemblyTypeEnum.STEEL_ASSEMBLY)
+        public List<Marca> GetMarcas(bool update = false)
         {
-            if(_marcas==null| update)
+            Assembly.AssemblyTypeEnum tipo = Assembly.AssemblyTypeEnum.STEEL_ASSEMBLY;
+            if (_marcas==null| update)
             {
                 
                 _marcas = new List<Marca>();
@@ -90,22 +71,18 @@ namespace TeklaMedabilAPIs
             }
             return _marcas;
         }
-
-
         public void ResetVisuais()
         {
             ModelObjectVisualization.ClearAllTemporaryStates();
         }
         public void SetVisivel(List<Marca> itens, bool status = false)
         {
-            ModelObjectVisualization.SetTransparency(itens.SelectMany(x=>x.GetPecas()).ToList().Cast<ModelObject>().ToList(), status? TemporaryTransparency.VISIBLE:TemporaryTransparency.HIDDEN);
+            ModelObjectVisualization.SetTransparency(itens.SelectMany(x=>x.GetPosicoes()).ToList().Cast<ModelObject>().ToList(), status? TemporaryTransparency.VISIBLE:TemporaryTransparency.HIDDEN);
         }
         public void SetCor(List<Marca> itens, Tekla.Structures.Model.UI.Color cor)
         {
-            ModelObjectVisualization.SetTemporaryState(itens.SelectMany(x => x.GetPecas()).ToList().Cast<ModelObject>().ToList(), cor);
+            ModelObjectVisualization.SetTemporaryState(itens.SelectMany(x => x.GetPosicoes()).ToList().Cast<ModelObject>().ToList(), cor);
         }
-
-
         public List<Part> GetPosicoes()
         {
             ModelObjectEnumerator.AutoFetch = true;
@@ -114,20 +91,5 @@ namespace TeklaMedabilAPIs
 
             return itens;
         }
-        public List<Tekla.Structures.Model.Part> GetPosicoes(Assembly marca)
-        {
-            List<Tekla.Structures.Model.Part> parts = new List<Tekla.Structures.Model.Part>();
-
-            var principal = marca.GetMainPart();
-            parts.Add(principal as Part);
-
-            var arr = marca.GetSecondaries().ToArray().ToList();
-
-            parts.AddRange(arr.Select(x => x as Part));
-
-            return parts;
-        }
-
-       
     }
 }
