@@ -41,19 +41,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Conexoes">
-      <HintPath>dlls\Conexoes.dll</HintPath>
+      <HintPath>..\..\DLLS\Conexoes.dll</HintPath>
     </Reference>
-    <Reference Include="DB, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>dlls\DB.dll</HintPath>
+    <Reference Include="DB">
+      <HintPath>..\..\DLLS\DB.dll</HintPath>
     </Reference>
-    <Reference Include="mysql.data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>dlls\mysql.data.dll</HintPath>
+    <Reference Include="mysql.data">
+      <HintPath>..\..\DLLS\mysql.data.dll</HintPath>
     </Reference>
-    <Reference Include="MySqlBackup, Version=2.0.12.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>dlls\MySqlBackup.dll</HintPath>
+    <Reference Include="MySqlBackup">
+      <HintPath>..\..\DLLS\MySqlBackup.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

@@ -3,4 +3,3 @@ E:\Documentos\Projetos\TeklaAPI\DLMTekla\bin\Debug\DLMTekla.pdb
 E:\Documentos\Projetos\TeklaAPI\ObjDir\2019\DLMTekla\DLMTekla.csproj.CoreCompileInputs.cache
 E:\Documentos\Projetos\TeklaAPI\ObjDir\2019\DLMTekla\DLMTekla.dll
 E:\Documentos\Projetos\TeklaAPI\ObjDir\2019\DLMTekla\DLMTekla.pdb
-E:\Documentos\Projetos\TeklaAPI\ObjDir\2019\DLMTekla\DLMTekla.csprojAssemblyReference.cache

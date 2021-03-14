@@ -10,7 +10,6 @@ E:\Documentos\Projetos\TeklaAPI\ObjDir\2019\TeklaMedabilAPIs\TeklaMedabilAPIs.cs
 E:\Documentos\Projetos\TeklaAPI\TeklaAPI\bin\Debug\Conexoes.dll
 E:\Documentos\Projetos\TeklaAPI\TeklaAPI\bin\Debug\sapnco.dll
 E:\Documentos\Projetos\TeklaAPI\TeklaAPI\bin\Debug\Xceed.Wpf.Toolkit.dll
-E:\Documentos\Projetos\TeklaAPI\TeklaAPI\bin\Debug\Calculos.dll
 E:\Documentos\Projetos\TeklaAPI\TeklaAPI\bin\Debug\netDxf.dll
 E:\Documentos\Projetos\TeklaAPI\TeklaAPI\bin\Debug\DLMCam.dll
 E:\Documentos\Projetos\TeklaAPI\TeklaAPI\bin\Debug\DB.dll
@@ -22,7 +21,6 @@ E:\Documentos\Projetos\TeklaAPI\TeklaAPI\bin\Debug\itextsharp.dll
 E:\Documentos\Projetos\TeklaAPI\TeklaAPI\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
 E:\Documentos\Projetos\TeklaAPI\TeklaAPI\bin\Debug\BingMapsRESTToolkit.dll
 E:\Documentos\Projetos\TeklaAPI\TeklaAPI\bin\Debug\WPFExtensions.dll
-E:\Documentos\Projetos\TeklaAPI\TeklaAPI\bin\Debug\Biblioteca_Daniel.dll
 E:\Documentos\Projetos\TeklaAPI\TeklaAPI\bin\Debug\MySql.Data.dll
 E:\Documentos\Projetos\TeklaAPI\TeklaAPI\bin\Debug\sapnco_utils.dll
 E:\Documentos\Projetos\TeklaAPI\TeklaAPI\bin\Debug\netDxfMBS.dll
